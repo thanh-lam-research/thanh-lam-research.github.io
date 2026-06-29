@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Thanh Lam — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  @page { size: A4; margin: 13mm 15mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #211d2e;
+    --soft: #4a4656;
+    --faint: #6f6b7a;
+    --accent: #ef4f2b;
+    --accent-ink: #cf3c1c;
+    --teal: #0d9488;
+    --rule: #e7ddcb;
+    --hl: #ffdf6b;
+    --sans: 'Inter', -apple-system, Arial, sans-serif;
+    --display: 'Fraunces', Georgia, serif;
+    --hand: 'Caveat', cursive;
+  }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: var(--sans); color: var(--ink); font-size: 9.6pt; line-height: 1.32; }
+  a { color: inherit; text-decoration: none; }
+  .hl {
+    background-color: rgba(255, 223, 107, .45);
+    border-radius: 3px; padding: .5px 3px;
+    box-decoration-break: clone; -webkit-box-decoration-break: clone;
+  }
+
+  /* ---- Header ---- */
+  .head { display: flex; gap: 18px; align-items: center; border-bottom: 2.5px solid var(--accent); padding-bottom: 11px; }
+  .head__text { flex: 1; }
+  .name { font-family: var(--display); font-size: 27pt; font-weight: 600; line-height: 1; letter-spacing: -.3px; }
+  .name .dot { color: var(--accent); }
+  .role { font-size: 9.7pt; color: var(--teal); font-weight: 600; margin-top: 5px; }
+
+  .icons { display: flex; gap: 8px; margin-top: 11px; }
+  .icons a {
+    width: 26px; height: 26px; border-radius: 50%; background: var(--accent);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .icons a.teal { background: var(--teal); }
+  .icons svg { width: 14px; height: 14px; }
+  .icons svg [fill] { fill: #fff; } .icons svg [stroke] { stroke: #fff; }
+
+  .photo { width: 86px; flex: 0 0 86px; text-align: center; }
+  .photo img { width: 86px; height: 108px; object-fit: cover; border-radius: 12px; border: 2.5px solid #fff; box-shadow: 0 3px 10px rgba(60,40,20,.18); }
+  .photo .cap { font-family: var(--hand); font-size: 8.5pt; color: var(--faint); margin-top: 3px; line-height: 1.05; }
+
+  /* ---- Summary ---- */
+  .summary { margin-top: 9px; font-size: 9.4pt; color: var(--soft); }
+  .summary b { color: var(--ink); font-weight: 600; }
+
+  /* ---- Sections ---- */
+  section { margin-top: 8px; }
+  h2 {
+    font-family: var(--display); font-size: 11pt; font-weight: 600; color: var(--accent);
+    border-bottom: 1px solid var(--rule); padding-bottom: 2px; margin-bottom: 5px;
+  }
+
+  .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-bottom: 5px; }
+  .row:last-child { margin-bottom: 0; }
+  .row .title { font-weight: 700; }
+  .row .where { color: var(--teal); font-weight: 600; }
+  .row .detail { color: var(--faint); font-size: 9pt; margin-top: 1px; }
+  .when { text-align: right; color: var(--accent-ink); font-size: 8.6pt; font-weight: 600; white-space: nowrap; }
+
+  /* publications */
+  ol.pubs { list-style: none; counter-reset: p; }
+  ol.pubs li { position: relative; padding-left: 18px; margin-bottom: 4px; }
+  ol.pubs li::before {
+    counter-increment: p; content: counter(p);
+    position: absolute; left: 0; top: 1px; color: #fff; background: var(--accent);
+    width: 13px; height: 13px; border-radius: 50%; font-size: 7.5pt; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .pub-title { font-weight: 700; }
+  .pub-authors { color: var(--soft); }
+  .pub-venue { color: var(--accent-ink); font-weight: 600; }
+  .me { text-decoration: underline; text-underline-offset: 2px; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 22px; }
+  .kv { font-size: 9.3pt; color: var(--soft); }
+  .kv .yr { color: var(--accent); font-weight: 700; font-size: 8.6pt; margin-right: 6px; }
+  .inline { font-size: 9.3pt; color: var(--soft); margin-bottom: 1px; }
+  .inline b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+
+  <div class="head">
+    <div class="head__text">
+      <div class="name">Thanh Lam<span class="dot">.</span></div>
+      <div class="role">Machine Learning Researcher · Quantitative Researcher</div>
+      <div class="icons">
+        <a class="teal" href="mailto:lamchithanh1997@gmail.com" title="Email" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path fill="#fff" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5Z"/></svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=EnEvefwAAAAJ&hl=en" title="Google Scholar" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24"><path fill="#fff" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm-6 9.18v3.32C6 17.43 8.69 19 12 19s6-1.57 6-3.5v-3.32l-6 3.27-6-3.27Z"/></svg>
+        </a>
+        <a class="teal" href="https://www.linkedin.com/in/thanhlam26/" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path fill="#fff" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.34 18.34V10.5H5.67v7.84h2.67ZM7 9.34a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1Zm11.34 9v-4.3c0-2.3-1.23-3.37-2.87-3.37a2.48 2.48 0 0 0-2.25 1.24v-1.06h-2.67v7.84h2.67v-4.15c0-1.1.2-2.16 1.57-2.16 1.34 0 1.35 1.26 1.35 2.23v4.08h2.87Z"/></svg>
+        </a>
+        <a href="https://x.com/chi_thanh_lam" title="X" aria-label="X">
+          <svg viewBox="0 0 24 24"><path fill="#fff" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+        </a>
+        <a class="teal" href="https://thanh-lam-research.github.io" title="Personal website" aria-label="Personal website">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9.2"/>
+            <line x1="2.8" y1="12" x2="21.2" y2="12"/>
+            <line x1="2.8" y1="8.3" x2="21.2" y2="8.3"/>
+            <line x1="2.8" y1="15.7" x2="21.2" y2="15.7"/>
+            <path d="M12 2.8c3 2.6 3 15.8 0 18.4M12 2.8c-3 2.6-3 15.8 0 18.4"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="assets/profile.jpg" alt="Thanh Lam" />
+      <div class="cap">Me &amp; my mom<br>PhD graduation 🎓</div>
+    </div>
+  </div>
+
+  <p class="summary">
+    Machine learning researcher working <span class="hl">where rigorous theory meets algorithms that
+    generalize</span> in practice. <b>PhD in Computer Science</b> from the National University of Singapore
+    (advised by Prof. Bryan Low &amp; Prof. Patrick Jaillet); since 2023 a <b>Quantitative Researcher at
+    Citadel Securities</b>, building and evaluating predictive systems in real-world, high-noise environments.
+    Currently focused on <b>foundation models, reasoning, and scalable training</b>, with the goal of
+    contributing to frontier AI.
+  </p>
+
+  <section>
+    <h2>Education</h2>
+    <div class="row">
+      <div>
+        <span class="title">Ph.D., Computer Science</span> · <span class="where">National University of Singapore</span>
+        <div class="detail">Advised by Prof. Bryan Low (NUS) &amp; Prof. Patrick Jaillet (MIT). Sole recipient of the SMART Graduate Fellowship (1 of 4 universities, 2019). GPA 4.6/5.</div>
+      </div>
+      <div class="when">2019 – 2023</div>
+    </div>
+    <div class="row">
+      <div>
+        <span class="title">Visiting Graduate Student</span> · <span class="where">MIT — Lab for Information &amp; Decision Systems (LIDS)</span>
+        <div class="detail">Fall 2022 with Prof. Patrick Jaillet, fully funded by the SMART Fellowship.</div>
+      </div>
+      <div class="when">2022</div>
+    </div>
+    <div class="row">
+      <div>
+        <span class="title">B.Comp., Computer Science (First Class Honours)</span> · <span class="where">National University of Singapore</span>
+        <div class="detail">ASEAN Undergraduate Scholarship — 3 students nationwide (Vietnam, 2015). GPA 4.6/5.</div>
+      </div>
+      <div class="when">2015 – 2019</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="row">
+      <div>
+        <span class="title">Quantitative Researcher</span> · <span class="where">Citadel Securities, London</span>
+        <div class="detail">Alpha research in systematic futures and equities (mid- to high-frequency); building and evaluating predictive models in production, high-noise settings.</div>
+      </div>
+      <div class="when">2023 – Present</div>
+    </div>
+    <div class="row">
+      <div>
+        <span class="title">Quantitative Research Intern</span> · <span class="where">Citadel Securities</span>
+        <div class="detail">Alpha research in digital assets.</div>
+      </div>
+      <div class="when">2022</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Publications</h2>
+    <p class="detail" style="margin-bottom:6px;">* equal contribution · full list on <a href="https://scholar.google.com/citations?user=EnEvefwAAAAJ&hl=en" style="color:var(--accent-ink);font-weight:600;text-decoration:underline;">Google Scholar</a>.</p>
+    <ol class="pubs">
+      <li>
+        <span class="pub-title">Risk-Aware Reinforcement Learning with Coherent Risk Measures and Non-linear Function Approximation.</span>
+        <span class="pub-authors"><span class="me">Thanh Lam</span>, Arun Verma, Bryan Low, Patrick Jaillet.</span>
+        <a href="https://openreview.net/forum?id=-RwZOVybbj" class="pub-venue" style="text-decoration:underline;">ICLR 2023</a>.
+      </li>
+      <li>
+        <span class="pub-title">Model Fusion for Personalized Learning.</span>
+        <span class="pub-authors"><span class="me">Thanh Lam*</span>, Trong Nghia Hoang*, Bryan K. H. Low, Patrick Jaillet.</span>
+        <a href="https://proceedings.mlr.press/v139/lam21a.html" class="pub-venue" style="text-decoration:underline;">ICML 2021</a>
+        <span class="pub-venue">(pp. 5948–5958; 21.5% acceptance).</span>
+      </li>
+      <li>
+        <span class="pub-title">Learning Task-Agnostic Embedding of Multiple Black-Box Experts for Multi-Task Model Fusion.</span>
+        <span class="pub-authors">Trong Nghia Hoang*, <span class="me">Thanh Lam*</span>, Bryan K. H. Low, Patrick Jaillet.</span>
+        <a href="https://proceedings.mlr.press/v119/hoang20b.html" class="pub-venue" style="text-decoration:underline;">ICML 2020</a>
+        <span class="pub-venue">(pp. 4282–4292; 21.8% acceptance).</span>
+      </li>
+      <li>
+        <span class="pub-title">On Average-Case Error Bounds for Kernel-Based Bayesian Quadrature.</span>
+        <span class="pub-authors">Xu Cai*, <span class="me">Thanh Lam*</span>, Jonathan Scarlett.</span>
+        <a href="https://arxiv.org/abs/2202.10615" class="pub-venue" style="text-decoration:underline;">arXiv</a><span class="pub-venue">.</span>
+      </li>
+      <li>
+        <span class="pub-title">Implicit Regularization via Spectral Neural Networks and Non-linear Matrix Sensing.</span>
+        <span class="pub-authors">Hong T. M. Chu, Subhro Ghosh, <span class="me">Thanh Lam*</span>, Soumendu Sundar Mukherjee.</span>
+        <a href="https://arxiv.org/abs/2402.17595" class="pub-venue" style="text-decoration:underline;">arXiv</a>
+        <span class="pub-venue">(* co-first author).</span>
+      </li>
+      <li>
+        <span class="pub-title">Online Data Procurement with Self-Interested Agents.</span>
+        <span class="pub-authors"><span class="me">Thanh Lam</span>, Bryan Low, Patrick Jaillet.</span>
+        <span class="pub-venue">Working paper.</span>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Honors &amp; Awards</h2>
+    <div class="cols">
+      <div class="kv"><span class="yr">2019</span>SMART Graduate Fellowship (sole recipient)</div>
+      <div class="kv"><span class="yr">2020–21</span>Research Achievement Award (×2)</div>
+      <div class="kv"><span class="yr">2021</span>Honor List for Teaching Excellence</div>
+      <div class="kv"><span class="yr">2019</span>Dean's List</div>
+      <div class="kv"><span class="yr">2015</span>ASEAN Undergraduate Scholarship</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Professional Service</h2>
+    <div class="inline"><b>Conference reviewer:</b> ICML ('21–'23), NeurIPS ('21–'23), ICLR ('22/'23), AISTATS '23, IEEE RA-L '22.</div>
+    <div class="inline"><b>Journal reviewer:</b> Neural Networks, IEEE Robotics &amp; Automation Letters (RA-L).</div>
+    <div class="inline"><b>Conference volunteer:</b> ICLR '20, ICML '20/'21, NeurIPS '20/'21.</div>
+  </section>
+
+</body>
+</html>
