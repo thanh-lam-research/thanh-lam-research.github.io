@@ -3,31 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thanh Lam · Machine Learning Researcher</title>
-  <meta name="description" content="Thanh Lam — machine learning researcher in probabilistic ML, Gaussian processes & reinforcement learning. PhD, NUS. Quant Researcher at Citadel Securities." />
 
-  <meta property="og:title" content="Thanh Lam · Machine Learning Researcher" />
-  <meta property="og:description" content="Chasing algorithms that are both provably sound and genuinely useful. Probabilistic ML · Gaussian processes · RL." />
-  <meta property="og:type" content="website" />
+  <title>Thanh Lam (Lam Chi Thanh) — ML Researcher · NUS PhD · Citadel Securities</title>
+  <meta name="description" content="Thanh Lam (also Lam Chi Thanh, Chi Thanh Lam, Steve Lam) — machine learning researcher and Quantitative Researcher at Citadel Securities (CitSec). PhD from NUS, visiting student at MIT. Research in probabilistic ML, Gaussian processes, and reinforcement learning." />
+  <meta name="keywords" content="Thanh Lam, Lam Chi Thanh, Chi Thanh Lam, Steve Lam, Citadel Securities, CitSec, NUS, National University of Singapore, MIT, machine learning researcher, quantitative researcher, probabilistic machine learning, Gaussian processes, reinforcement learning" />
+  <meta name="author" content="Thanh Lam" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thanh-lam-research.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Thanh Lam" />
+  <meta property="og:title" content="Thanh Lam (Lam Chi Thanh) — ML Researcher · Citadel Securities" />
+  <meta property="og:description" content="Machine learning researcher and Quantitative Researcher at Citadel Securities. PhD from NUS, visiting student at MIT. Probabilistic ML · Gaussian processes · reinforcement learning." />
+  <meta property="og:url" content="https://thanh-lam-research.github.io/" />
+  <meta property="og:image" content="https://thanh-lam-research.github.io/assets/profile.jpg" />
+  <meta property="profile:first_name" content="Thanh" />
+  <meta property="profile:last_name" content="Lam" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Thanh Lam — ML Researcher · Citadel Securities · NUS PhD" />
+  <meta name="twitter:description" content="Machine learning researcher. Probabilistic ML · Gaussian processes · reinforcement learning. Quantitative Researcher at Citadel Securities." />
+  <meta name="twitter:image" content="https://thanh-lam-research.github.io/assets/profile.jpg" />
+  <meta name="twitter:creator" content="@chi_thanh_lam" />
+
+  <!-- Structured data: Person (helps Google associate every name variant + affiliation) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thanh Lam",
+    "alternateName": ["Lam Chi Thanh", "Chi Thanh Lam", "Steve Lam"],
+    "jobTitle": "Machine Learning Researcher, Quantitative Researcher",
+    "worksFor": { "@type": "Organization", "name": "Citadel Securities" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "National University of Singapore" },
+      { "@type": "CollegeOrUniversity", "name": "Massachusetts Institute of Technology" }
+    ],
+    "knowsAbout": [
+      "Machine Learning", "Probabilistic Machine Learning", "Gaussian Processes",
+      "Reinforcement Learning", "Bayesian Optimization", "Foundation Models", "Quantitative Research"
+    ],
+    "url": "https://thanh-lam-research.github.io/",
+    "image": "https://thanh-lam-research.github.io/assets/profile.jpg",
+    "email": "mailto:lamchithanh1997@gmail.com",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=EnEvefwAAAAJ&hl=en",
+      "https://www.linkedin.com/in/thanhlam26/",
+      "https://x.com/chi_thanh_lam"
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231f4e79'/><text x='50' y='68' font-family='Georgia,serif' font-size='52' fill='white' text-anchor='middle'>TL</text></svg>" />
 </head>
 <body>
   <!-- ===== Navigation ===== -->
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#top" class="nav__brand">Thanh&nbsp;Lam<span class="nav__dot">.</span></a>
+      <a href="#top" class="nav__brand">Thanh&nbsp;Lam</a>
       <nav class="nav__links" aria-label="Primary">
         <a href="#cv">Education</a>
-        <a href="#publications">Papers</a>
+        <a href="#publications">Publications</a>
         <!-- <a href="#research">Research</a> -->
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
-        <span class="theme-toggle__icon">🌙</span>
+        <span class="theme-toggle__icon">Dark</span>
       </button>
     </div>
   </header>
@@ -35,45 +81,36 @@
   <main id="top">
     <!-- ===== Hero ===== -->
     <section class="hero">
-      <div class="hero__blob" aria-hidden="true"></div>
       <div class="hero__inner">
         <div class="hero__photo">
           <div class="hero__photo-frame">
-            <img src="assets/profile.jpg" alt="Thanh Lam at his PhD graduation with his mom"
+            <img src="assets/profile.jpg" alt="Thanh Lam at his PhD graduation with his mother"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
             <div class="hero__photo-fallback">
               <span>TL</span>
-              <small>drop your photo here →<br>assets/profile.jpg</small>
             </div>
-            <span class="hero__sticker">Hello! 😄</span>
           </div>
-          <p class="hero__caption">🎓 My PhD graduation, with my mom 💛</p>
+          <p class="hero__caption">At his PhD graduation, with his mother</p>
         </div>
         <div class="hero__text">
-          <p class="hero__hello">Hey there <span class="wave" aria-hidden="true">👋</span> I'm</p>
           <h1 class="hero__name">Thanh&nbsp;Lam</h1>
           <p class="hero__role">Machine Learning Researcher · Quantitative Researcher</p>
+          <p class="hero__aka">also known as Lam Chi Thanh · Chi Thanh Lam · Steve Lam</p>
           <div class="hero__tagline">
             <p>
-              I'm interested in studying and developing intelligent systems — in particular,
-              <span class="hl">where elegant theory meets algorithms that actually generalize.</span>
+              Thanh Lam is a Quantitative Researcher at Citadel Securities, where he applies
+              machine learning, statistics, and optimization to problems in quantitative finance.
             </p>
             <p>
-              Previously earned a <strong>PhD in Computer Science at NUS</strong>, where I was
-              fortunate to be supervised by Prof. Bryan Low (NUS) and Prof. Patrick Jaillet (MIT).
-              Since then I've been a <strong>Quantitative Researcher at Citadel Securities</strong>,
-              building and evaluating predictive systems in real-world, high-noise environments.
-            </p>
-            <p>
-              I'm currently exploring <strong>foundation models, reasoning, and scalable training</strong>,
-              with the goal of contributing to frontier AI. I'm also deeply enthusiastic about
-              <strong>robotics</strong>, having worked briefly in the field earlier in my journey.
+              He received his PhD in Computer Science from the National University of Singapore,
+              advised by Prof. Bryan Low (NUS) and Prof. Patrick Jaillet (MIT). His doctoral research
+              covered meta-learning, Bayesian inference, Gaussian processes, and reinforcement learning.
             </p>
           </div>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#publications">Read my papers</a>
-            <a class="btn btn--ghost" href="Thanh_Lam_CV.pdf" target="_blank" rel="noopener">Grab my CV ↗</a>
+            <a class="btn btn--primary" href="#publications">Publications</a>
+            <a class="btn btn--ghost" href="Thanh_Lam_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
           </div>
           <div class="hero__social">
             <a href="https://scholar.google.com/citations?user=EnEvefwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
@@ -91,18 +128,18 @@
     <!-- ===== 01 · Education + Honors + Service ===== -->
     <section id="cv" class="section section--tint">
       <div class="section__inner" data-reveal>
-        <h2 class="section__title"><span class="section__num">01</span> Education &amp; recognition</h2>
+        <h2 class="section__title">Education &amp; Honors</h2>
 
         <div class="grid2">
           <div>
-            <h3 class="subhead">Where I studied</h3>
+            <h3 class="subhead">Education</h3>
             <div class="timeline timeline--compact">
               <div class="timeline__item">
                 <div class="timeline__date">2019 — 2023</div>
                 <div class="timeline__content">
                   <h3>Ph.D., Computer Science</h3>
                   <p class="timeline__org">National University of Singapore · GPA 4.6/5</p>
-                  <p>Fortunate to be supervised by Prof. Bryan Low (NUS) &amp; Prof. Patrick Jaillet (MIT). Sole recipient of the SMART Fellowship (1 of 4 universities, 2019).</p>
+                  <p>Advised by Prof. Bryan Low (NUS) and Prof. Patrick Jaillet (MIT). Sole recipient of the SMART Fellowship (1 of 4 universities, 2019).</p>
                 </div>
               </div>
               <div class="timeline__item">
@@ -125,7 +162,7 @@
           </div>
 
           <div>
-            <h3 class="subhead">Honors 🏆</h3>
+            <h3 class="subhead">Honors</h3>
             <ul class="list">
               <li><span class="list__year">2019</span> SMART Graduate Fellowship (sole recipient)</li>
               <li><span class="list__year">'20–'21</span> Research Achievement Award (×2)</li>
@@ -134,7 +171,7 @@
               <li><span class="list__year">2015</span> ASEAN Undergraduate Scholarship</li>
             </ul>
 
-            <h3 class="subhead subhead--mt">Service 🤝</h3>
+            <h3 class="subhead subhead--mt">Service</h3>
             <ul class="list">
               <li><strong>Reviewer</strong> — ICML, NeurIPS, ICLR, AISTATS ('21–'23)</li>
               <li><strong>Journal</strong> — Neural Networks, IEEE RA-L</li>
@@ -148,15 +185,14 @@
     <!-- ===== 02 · Publications ===== -->
     <section id="publications" class="section">
       <div class="section__inner" data-reveal>
-        <h2 class="section__title"><span class="section__num">02</span> Papers I'm proud of</h2>
+        <h2 class="section__title">Publications</h2>
         <p class="section__lead">
           Published at ICML &amp; ICLR, with recent preprints. <em>*</em> = equal contribution ·
           full list on <a href="https://scholar.google.com/citations?user=EnEvefwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
         </p>
 
         <ol class="pubs">
-          <li class="pub pub--fav">
-            <span class="pub__note-hand">↙ my favorite</span>
+          <li class="pub">
             <div class="pub__venue"><span class="tag tag--iclr">ICLR '23</span></div>
             <div class="pub__body">
               <h3 class="pub__title">Risk-Aware Reinforcement Learning with Coherent Risk Measures and Non-linear Function Approximation</h3>

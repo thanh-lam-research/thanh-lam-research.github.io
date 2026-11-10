@@ -8,7 +8,7 @@
 
   function syncIcon() {
     const icon = document.querySelector('.theme-toggle__icon');
-    if (icon) icon.textContent = root.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+    if (icon) icon.textContent = root.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
   }
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -30,18 +30,6 @@
     const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-
-    // Little hello for the curious folks who open devtools 👀
-    try {
-      console.log(
-        '%c👋 Hey, you opened the console!',
-        'font-size:15px;font-weight:700;color:#ef4f2b'
-      );
-      console.log(
-        '%cIf you like poking under the hood, we should talk. — Thanh\n→ lamchithanh1997@gmail.com',
-        'font-size:12px;color:#0d9488'
-      );
-    } catch (e) {}
 
     // Reveal-on-scroll for sections
     const reveals = document.querySelectorAll('[data-reveal]');
