@@ -46,6 +46,8 @@
   .row .title { font-weight: 600; }
   .row .where { color: var(--ink); }
   .row .detail { color: var(--soft); font-size: 9pt; margin-top: 1px; }
+  .row .bullets { color: var(--soft); font-size: 9pt; margin: 2px 0 0 14px; }
+  .row .bullets li { margin-bottom: 1px; }
   .when { text-align: right; color: var(--faint); font-size: 8.8pt; white-space: nowrap; font-variant-numeric: tabular-nums; }
 
   /* publications */
@@ -64,8 +66,8 @@
   .me { font-weight: 600; color: var(--ink); }
 
   .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 22px; }
-  .kv { font-size: 9.3pt; color: var(--soft); }
-  .kv .yr { display: inline-block; min-width: 62px; color: var(--faint); font-size: 8.8pt; font-variant-numeric: tabular-nums; }
+  .kv { display: grid; grid-template-columns: 62px 1fr; font-size: 9.3pt; color: var(--soft); }
+  .kv .yr { color: var(--faint); font-size: 8.8pt; font-variant-numeric: tabular-nums; }
   .inline { font-size: 9.3pt; color: var(--soft); margin-bottom: 2px; }
   .inline b { color: var(--ink); font-weight: 600; }
 </style>
@@ -74,7 +76,7 @@
 
   <div class="head">
     <div class="name">Thanh Lam</div>
-    <div class="role">Quantitative Researcher · Machine Learning Researcher</div>
+    <div class="role">Machine Learning Researcher</div>
     <div class="contact">
       <a href="mailto:lamchithanh1997@gmail.com">lamchithanh1997@gmail.com</a><span class="sep">·</span>
       <a href="https://thanh-lam-research.github.io">thanh-lam-research.github.io</a><span class="sep">·</span>
@@ -85,10 +87,11 @@
   </div>
 
   <p class="summary">
-    Quantitative Researcher at Citadel Securities, applying machine learning and statistics to quantitative
-    finance with a focus on alpha research. PhD in Computer Science from the National University of Singapore,
-    advised by Prof. Bryan Low and Prof. Patrick Jaillet, with research in meta-learning, Bayesian inference,
-    Gaussian processes, and reinforcement learning.
+    Machine learning researcher working on deep learning for financial time series; I lead neural-network
+    research for the high-frequency futures team at Citadel Securities. PhD in Computer Science (NUS), advised
+    by Prof. Bryan Low and Prof. Patrick Jaillet (MIT); first- and co-first-author papers at ICLR and ICML.
+    Research interests: reinforcement learning and multi-armed bandits, through both an algorithmic and a
+    theoretical lens; optimization and implicit regularization; sequence models at scale.
   </p>
 
   <section>
@@ -96,7 +99,9 @@
     <div class="row">
       <div>
         <span class="title">Quantitative Researcher</span> · <span class="where">Citadel Securities, London</span>
-        <div class="detail">Applying machine learning and statistics to quantitative finance, with a focus on alpha research.</div>
+        <ul class="bullets">
+          <li>Lead the neural-network effort in alpha research for the high-frequency futures team.</li>
+          <li>Focus on large-scale deep learning for short-horizon time-series prediction on noisy, non-stationary market data.</li>        </ul>
       </div>
       <div class="when">2023 – Present</div>
     </div>
@@ -114,21 +119,21 @@
     <div class="row">
       <div>
         <span class="title">Ph.D., Computer Science</span> · <span class="where">National University of Singapore</span>
-        <div class="detail">Advised by Prof. Bryan Low (NUS) and Prof. Patrick Jaillet (MIT). Sole recipient of the SMART Graduate Fellowship (1 of 4 universities, 2019). GPA 4.6/5.</div>
+        <div class="detail">Advised by Prof. Bryan Low (NUS) and Prof. Patrick Jaillet (MIT). GPA 4.6/5.</div>
       </div>
       <div class="when">2019 – 2023</div>
     </div>
     <div class="row">
       <div>
         <span class="title">Visiting Graduate Student</span> · <span class="where">MIT, Laboratory for Information &amp; Decision Systems (LIDS)</span>
-        <div class="detail">Fall 2022 with Prof. Patrick Jaillet, fully funded by the SMART Fellowship.</div>
+        <div class="detail">Hosted by Prof. Patrick Jaillet.</div>
       </div>
       <div class="when">2022</div>
     </div>
     <div class="row">
       <div>
         <span class="title">B.Comp., Computer Science (First Class Honours)</span> · <span class="where">National University of Singapore</span>
-        <div class="detail">ASEAN Undergraduate Scholarship, one of 3 students selected nationwide (Vietnam, 2015). GPA 4.6/5.</div>
+        <div class="detail">GPA 4.6/5.</div>
       </div>
       <div class="when">2015 – 2019</div>
     </div>
@@ -146,14 +151,12 @@
       <li>
         <span class="pub-title">Model Fusion for Personalized Learning.</span>
         <span class="pub-authors"><span class="me">Thanh Lam*</span>, Trong Nghia Hoang*, Bryan K. H. Low, Patrick Jaillet.</span>
-        <a href="https://proceedings.mlr.press/v139/lam21a.html" class="pub-venue">ICML 2021</a>
-        <span class="pub-authors">(pp. 5948–5958; 21.5% acceptance).</span>
+        <a href="https://proceedings.mlr.press/v139/lam21a.html" class="pub-venue">ICML 2021</a>.
       </li>
       <li>
         <span class="pub-title">Learning Task-Agnostic Embedding of Multiple Black-Box Experts for Multi-Task Model Fusion.</span>
         <span class="pub-authors">Trong Nghia Hoang*, <span class="me">Thanh Lam*</span>, Bryan K. H. Low, Patrick Jaillet.</span>
-        <a href="https://proceedings.mlr.press/v119/hoang20b.html" class="pub-venue">ICML 2020</a>
-        <span class="pub-authors">(pp. 4282–4292; 21.8% acceptance).</span>
+        <a href="https://proceedings.mlr.press/v119/hoang20b.html" class="pub-venue">ICML 2020</a>.
       </li>
       <li>
         <span class="pub-title">On Average-Case Error Bounds for Kernel-Based Bayesian Quadrature.</span>
@@ -163,8 +166,7 @@
       <li>
         <span class="pub-title">Implicit Regularization via Spectral Neural Networks and Non-linear Matrix Sensing.</span>
         <span class="pub-authors">Hong T. M. Chu, Subhro Ghosh, <span class="me">Thanh Lam*</span>, Soumendu Sundar Mukherjee.</span>
-        <a href="https://arxiv.org/abs/2402.17595" class="pub-venue">arXiv:2402.17595</a>
-        <span class="pub-authors">(co-first author).</span>
+        <a href="https://arxiv.org/abs/2402.17595" class="pub-venue">arXiv:2402.17595</a>.
       </li>
       <li>
         <span class="pub-title">Online Data Procurement with Self-Interested Agents.</span>
@@ -177,19 +179,17 @@
   <section>
     <h2>Honors &amp; Awards</h2>
     <div class="cols">
-      <div class="kv"><span class="yr">2019</span>SMART Graduate Fellowship (sole recipient)</div>
+      <div class="kv"><span class="yr">2019</span>SMART Graduate Fellowship (sole recipient across 4 universities)</div>
       <div class="kv"><span class="yr">2020–21</span>Research Achievement Award (×2)</div>
       <div class="kv"><span class="yr">2021</span>Honor List for Teaching Excellence</div>
       <div class="kv"><span class="yr">2019</span>Dean's List</div>
-      <div class="kv"><span class="yr">2015</span>ASEAN Undergraduate Scholarship</div>
+      <div class="kv"><span class="yr">2015</span>ASEAN Undergraduate Scholarship (1 of 3 nationwide)</div>
     </div>
   </section>
 
   <section>
-    <h2>Professional Service</h2>
-    <div class="inline"><b>Conference reviewer:</b> ICML ('21–'23), NeurIPS ('21–'23), ICLR ('22/'23), AISTATS '23, IEEE RA-L '22.</div>
-    <div class="inline"><b>Journal reviewer:</b> Neural Networks, IEEE Robotics &amp; Automation Letters (RA-L).</div>
-    <div class="inline"><b>Conference volunteer:</b> ICLR '20, ICML '20/'21, NeurIPS '20/'21.</div>
+    <h2>Service</h2>
+    <div class="inline">Reviewer for ICML, NeurIPS, ICLR, AISTATS (2021–2023), Neural Networks, and IEEE RA-L; volunteer at ICLR, ICML, and NeurIPS (2020–2021).</div>
   </section>
 
 </body>
