@@ -1,0 +1,143 @@
+% Thanh Lam — CV. Source of the site's Thanh_Lam_CV.pdf: build with `tectonic cv.tex`, then copy cv.pdf to ../Thanh_Lam_CV.pdf.
+% Build with Tectonic (`tectonic cv.tex`) or XeLaTeX/LuaLaTeX (on Overleaf: Menu → Compiler → XeLaTeX).
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,top=13mm,bottom=12mm,left=17mm,right=17mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+% Libertinus Serif throughout; semibold instead of bold.
+\setmainfont{LibertinusSerif}[
+  Extension=.otf, UprightFont=*-Regular, BoldFont=*-Semibold,
+  ItalicFont=*-Italic, BoldItalicFont=*-SemiboldItalic, Numbers=Lining, Scale=1.1]
+\newfontfamily\namefont{LibertinusSerif}[
+  Extension=.otf, UprightFont=*-Semibold]
+
+\definecolor{ink}{HTML}{1A1D23}
+\definecolor{soft}{HTML}{3F4552}
+\definecolor{faint}{HTML}{6B7280}
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{rule}{HTML}{D5D9DE}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\frenchspacing
+\raggedright
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\AtBeginDocument{\color{ink}\fontsize{9.7}{12.8}\selectfont}
+
+% ---- Sections: small caps-style label in accent colour over a hairline ----
+\titleformat{\section}
+  {\color{accent}\fontsize{8.4}{10}\selectfont\bfseries\addfontfeatures{LetterSpace=9}}
+  {}{0pt}{\MakeUppercase}
+  [\vspace{1.5pt}{\color{rule}\titlerule}]
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+
+\newcommand{\subhead}[1]{\par\vspace{2pt}{\color{faint}\fontsize{8.4}{10}\selectfont\bfseries #1}\par\vspace{1pt}}
+
+% ---- Entries: title · place on the left, date pinned right ----
+\newcommand{\sep}{\enspace{\color{faint}\textperiodcentered}\enspace}
+\newlength{\datewidth}
+\newcommand{\entry}[3]{%
+  \settowidth{\datewidth}{\small #3}%
+  \begin{minipage}[t]{\dimexpr\linewidth-\datewidth-6mm\relax}\raggedright\leavevmode\textbf{#1}\sep #2\end{minipage}%
+  \hfill
+  \leavevmode{\color{faint}\small #3}\par}
+\newcommand{\detail}[1]{{\color{soft}\small #1}\par\vspace{4pt}}
+
+\newcommand{\me}[1]{\textbf{\color{ink}#1}}
+\newcommand{\pubtitle}[2]{\href{#1}{\textbf{\color{ink}#2}}}
+\newcommand{\venue}[1]{{\color{ink}\textit{#1}}}
+
+\setlist[itemize]{leftmargin=12pt,topsep=2pt,itemsep=1pt,parsep=0pt,label={\color{faint}\textbullet}}
+\newlist{pubs}{enumerate}{1}
+\setlist[pubs]{label={\color{faint}\small[\arabic*]},leftmargin=22pt,labelsep=5pt,topsep=1pt,itemsep=2.5pt,parsep=0pt}
+
+\begin{document}
+
+% ---- Header ----
+{\namefont\fontsize{25}{28}\selectfont Thanh Lam}\par
+\vspace{3pt}
+{\color{soft}\fontsize{10.5}{12}\selectfont Machine Learning Researcher}\par
+\vspace{4pt}
+{\small\color{accent}%
+\href{mailto:lamchithanh1997@gmail.com}{lamchithanh1997@gmail.com}\sep
+\href{https://thanh-lam-research.github.io}{thanh-lam-research.github.io}\sep
+\href{https://scholar.google.com/citations?user=EnEvefwAAAAJ&hl=en}{Google Scholar}\sep
+\href{https://www.linkedin.com/in/thanhlam26/}{LinkedIn}}\par
+\vspace{6pt}
+{\color{ink}\rule{\linewidth}{0.6pt}}\par
+\vspace{6pt}
+
+% ---- Summary (same text as the website intro), justified ----
+{\color{soft}\leftskip=0pt\rightskip=0pt\parfillskip=0pt plus 1fil
+\hyphenpenalty=300\exhyphenpenalty=50\emergencystretch=1.5em\spaceskip=0.25em plus 0.15em minus 0.02em
+I'm a machine learning researcher with a background in theoretical machine learning,
+reinforcement learning, and deep learning.
+I~work as a Quantitative Researcher at Citadel Securities, where I~spearhead neural-network
+research for the high-frequency futures team, developing deep-learning methods for
+short-horizon time-series prediction.
+I~received my PhD in Computer Science from the National University of Singapore,
+advised by Prof.~Bryan Low (NUS) and Prof.~Patrick Jaillet (MIT), working on
+reinforcement learning, sequential decision-making, and learning theory. My research
+has appeared at ICLR, ICML, and TMLR.\par}
+
+% ---- Experience ----
+\section{Research Experience}
+\entry{Quantitative Researcher}{Citadel Securities, London}{2023 – Present}
+{\color{soft}\small
+\begin{itemize}
+  \item Spearhead the high-frequency futures team's neural-network alpha research.
+  \item Built the team's deep-learning training recipe from scratch to production: large-scale sequential recurrent models for short-horizon prediction on noisy, non-stationary market data.
+\end{itemize}}
+\vspace{4pt}
+\entry{Quantitative Research Intern}{Citadel Securities, Singapore}{2022}
+\detail{Alpha research in digital assets.}
+
+% ---- Publications ----
+\section{Publications}
+\subhead{Peer-reviewed}
+{\color{soft}
+\begin{pubs}
+  \item \pubtitle{https://openreview.net/forum?id=-RwZOVybbj}{Risk-Aware Reinforcement Learning with Coherent Risk Measures and Non-linear Function Approximation.}
+    \me{Thanh Lam}, Arun Verma, Bryan Low, Patrick Jaillet. \venue{ICLR 2023}.
+  \item \pubtitle{https://openreview.net/forum?id=JJrKbq35l4}{On Average-Case Error Bounds for Kernel-Based Bayesian Quadrature.}
+    Xu Cai*, \me{Thanh Lam*}, Jonathan Scarlett. \venue{TMLR 2023}.
+  \item \pubtitle{https://proceedings.mlr.press/v139/lam21a.html}{Model Fusion for Personalized Learning.}
+    \me{Thanh Lam*}, Trong Nghia Hoang*, Bryan K.\,H. Low, Patrick Jaillet. \venue{ICML 2021}.
+  \item \pubtitle{https://proceedings.mlr.press/v119/hoang20b.html}{Learning Task-Agnostic Embedding of Multiple Black-Box Experts for Multi-Task Model Fusion.}
+    Trong Nghia Hoang*, \me{Thanh Lam*}, Bryan K.\,H. Low, Patrick Jaillet. \venue{ICML 2020}.
+\end{pubs}
+\subhead{Preprints \& working papers}
+\begin{pubs}[resume]
+  \item \pubtitle{https://arxiv.org/abs/2402.17595}{Implicit Bias via Spectral Neural Networks and Non-linear Matrix Sensing.}
+    Hong T.\,M. Chu, Xiaoyu Dong, Subhro Ghosh, \me{Thanh Lam*}, Soumendu Sundar Mukherjee. \venue{arXiv:2402.17595, 2024}.
+  \item \textbf{\color{ink}Online Data Procurement with Self-Interested Agents.}
+    \me{Thanh Lam}, Bryan Low, Patrick Jaillet. \venue{Working paper}.
+\end{pubs}}
+
+% ---- Education ----
+\section{Education}
+\entry{Ph.D., Computer Science}{National University of Singapore}{2019 – 2023}
+\detail{Advised by Prof.~Bryan Low (NUS) and Prof.~Patrick Jaillet (MIT). GPA 4.6/5.}
+\entry{Visiting Graduate Student}{MIT, Laboratory for Information \& Decision Systems (LIDS)}{Fall 2022}
+\detail{Hosted by Prof.~Patrick Jaillet.}
+\entry{B.Comp., Computer Science (First Class Honours)}{National University of Singapore}{2015 – 2019}
+\detail{GPA 4.6/5.}
+
+% ---- Research areas ----
+\section{Research Areas}
+{\color{soft}Theoretical machine learning, reinforcement learning, sequential decision-making, multi-armed bandits, optimization, deep learning, statistical learning, Bayesian methods.\par}
+
+% ---- Awards & service ----
+\section{Awards \& Service}
+{\color{soft}
+\textbf{\color{ink}Awards:} SMART Graduate Fellowship (sole recipient across 4 universities, 2019); Research Achievement Award (×2, 2020–21); Honor List for Teaching Excellence (2021); Dean's List (2019); ASEAN Undergraduate Scholarship (1~of~3 nationwide, 2015).\par
+\vspace{2pt}
+\textbf{\color{ink}Service:} Reviewer for ICML, NeurIPS, ICLR, AISTATS (2021–2023), Neural Networks, and IEEE RA-L; volunteer at ICLR, ICML, and NeurIPS (2020–2021).\par}
+
+\end{document}

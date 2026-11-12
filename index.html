@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Thanh Lam (Lam Chi Thanh) — Machine Learning Researcher · NUS PhD · Citadel Securities</title>
-  <meta name="description" content="Thanh Lam (also Lam Chi Thanh, Chi Thanh Lam, Steve Lam) — machine learning researcher leading neural-network alpha research for high-frequency futures at Citadel Securities (CitSec). PhD from NUS, visiting student at MIT. Publications at ICLR and ICML in reinforcement learning, model fusion, and Bayesian inference." />
-  <meta name="keywords" content="Thanh Lam, Lam Chi Thanh, Chi Thanh Lam, Steve Lam, Citadel Securities, CitSec, NUS, National University of Singapore, MIT, machine learning researcher, deep learning, time series, reinforcement learning, Gaussian processes, quantitative research" />
+  <meta name="description" content="Thanh Lam (also Lam Chi Thanh, Chi Thanh Lam, Steve Lam) — machine learning researcher with a background in theoretical ML, reinforcement learning, and deep learning. Quantitative Researcher at Citadel Securities (CitSec), spearheading neural-network research for the high-frequency futures team. PhD from NUS, visiting student at MIT. Publications at ICLR, ICML, and TMLR." />
+  <meta name="keywords" content="Thanh Lam, Lam Chi Thanh, Chi Thanh Lam, Steve Lam, Citadel Securities, CitSec, NUS, National University of Singapore, MIT, machine learning researcher, theoretical machine learning, reinforcement learning, multi-armed bandits, optimization, implicit regularization, deep learning, time series" />
   <meta name="author" content="Thanh Lam" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://thanh-lam-research.github.io/" />
@@ -15,7 +15,7 @@
   <meta property="og:type" content="profile" />
   <meta property="og:site_name" content="Thanh Lam" />
   <meta property="og:title" content="Thanh Lam (Lam Chi Thanh) — Machine Learning Researcher" />
-  <meta property="og:description" content="Machine learning researcher leading neural-network alpha research at Citadel Securities. PhD from NUS, visiting student at MIT. Publications at ICLR and ICML." />
+  <meta property="og:description" content="Machine learning researcher: theoretical ML, reinforcement learning, and deep learning. Quantitative Researcher at Citadel Securities. PhD from NUS. Publications at ICLR, ICML, and TMLR." />
   <meta property="og:url" content="https://thanh-lam-research.github.io/" />
   <meta property="og:image" content="https://thanh-lam-research.github.io/assets/profile.jpg" />
   <meta property="profile:first_name" content="Thanh" />
@@ -24,7 +24,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Thanh Lam — Machine Learning Researcher" />
-  <meta name="twitter:description" content="Machine learning researcher leading neural-network alpha research at Citadel Securities. PhD from NUS. Publications at ICLR and ICML." />
+  <meta name="twitter:description" content="Machine learning researcher: theoretical ML, reinforcement learning, and deep learning. Quantitative Researcher at Citadel Securities. PhD from NUS." />
   <meta name="twitter:image" content="https://thanh-lam-research.github.io/assets/profile.jpg" />
   <meta name="twitter:creator" content="@chi_thanh_lam" />
 
@@ -35,15 +35,15 @@
     "@type": "Person",
     "name": "Thanh Lam",
     "alternateName": ["Lam Chi Thanh", "Chi Thanh Lam", "Steve Lam"],
-    "jobTitle": "Machine Learning Researcher, Quantitative Researcher",
+    "jobTitle": "Quantitative Researcher",
     "worksFor": { "@type": "Organization", "name": "Citadel Securities" },
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "National University of Singapore" },
       { "@type": "CollegeOrUniversity", "name": "Massachusetts Institute of Technology" }
     ],
     "knowsAbout": [
-      "Machine Learning", "Deep Learning", "Time Series", "Reinforcement Learning",
-      "Gaussian Processes", "Bayesian Inference", "Meta-Learning", "Quantitative Research"
+      "Machine Learning", "Theoretical Machine Learning", "Reinforcement Learning", "Multi-Armed Bandits",
+      "Optimization", "Deep Learning", "Time Series", "Gaussian Processes", "Bayesian Inference"
     ],
     "url": "https://thanh-lam-research.github.io/",
     "image": "https://thanh-lam-research.github.io/assets/profile.jpg",
@@ -58,7 +58,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, { delimiters: [{ left: '\\(', right: '\\)', display: false }, { left: '\\[', right: '\\]', display: true }] })"></script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231f4e79'/><text x='50' y='68' font-family='Georgia,serif' font-size='52' fill='white' text-anchor='middle'>TL</text></svg>" />
 </head>
@@ -71,7 +75,7 @@
         <a href="#experience">Experience</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
-        <a href="#cv">Education</a>
+        <a href="#education">Education</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
         <span class="theme-toggle__icon">Dark</span>
@@ -95,21 +99,22 @@
         </div>
         <div class="hero__text">
           <h1 class="hero__name">Thanh&nbsp;Lam</h1>
-          <p class="hero__role">Machine Learning Researcher · Citadel Securities</p>
+          <p class="hero__role">Machine Learning Researcher</p>
           <div class="hero__tagline">
             <p>
-              I'm a machine learning researcher working on deep learning for financial time series.
-              At Citadel Securities, I lead neural-network research for the high-frequency futures team.
+              I'm a machine learning researcher with a background in theoretical machine learning,
+              reinforcement learning, and deep learning.
+            </p>
+            <p>
+              I work as a Quantitative Researcher at Citadel Securities, where I spearhead neural-network
+              research for the high-frequency futures team, developing deep-learning methods for
+              short-horizon time-series prediction.
             </p>
             <p>
               I received my PhD in Computer Science from the National University of Singapore,
-              advised by Prof. Bryan Low (NUS) and Prof. Patrick Jaillet (MIT), with first- and
-              co-first-author papers at ICLR and ICML on reinforcement learning, model fusion,
-              and Bayesian inference.
-            </p>
-            <p>
-              My current interests are reinforcement learning and bandits, optimization and implicit
-              regularization, and sequence models at scale.
+              advised by Prof. Bryan Low (NUS) and Prof. Patrick Jaillet (MIT), working on
+              reinforcement learning, sequential decision-making, and learning theory. My research
+              has appeared at ICLR, ICML, and TMLR.
             </p>
           </div>
 
@@ -118,22 +123,22 @@
             <a class="btn btn--ghost" href="#publications">Publications</a>
           </div>
           <div class="hero__social">
+            <a href="mailto:lamchithanh1997@gmail.com">Email</a>
+            <span>·</span>
             <a href="https://scholar.google.com/citations?user=EnEvefwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
             <span>·</span>
             <a href="https://www.linkedin.com/in/thanhlam26/" target="_blank" rel="noopener">LinkedIn</a>
             <span>·</span>
             <a href="https://x.com/chi_thanh_lam" target="_blank" rel="noopener">X</a>
-            <span>·</span>
-            <a href="mailto:lamchithanh1997@gmail.com">Email</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Industry experience ===== -->
+    <!-- ===== Research experience ===== -->
     <section id="experience" class="section section--tint">
-      <div class="section__inner" data-reveal>
-        <h2 class="section__title">Industry Experience</h2>
+      <div class="section__inner">
+        <h2 class="section__title">Research Experience</h2>
 
         <div class="timeline">
           <div class="timeline__item">
@@ -142,15 +147,16 @@
               <h3>Quantitative Researcher</h3>
               <p class="timeline__org">Citadel Securities · London</p>
               <ul class="bullets">
-                <li>Lead the neural-network effort in alpha research for the high-frequency futures team.</li>
-                <li>Focus on large-scale deep learning for short-horizon time-series prediction on noisy, non-stationary market data.</li>              </ul>
+                <li>Spearhead the high-frequency futures team's neural-network alpha research.</li>
+                <li>Built the team's deep-learning training recipe from scratch to production: large-scale sequential recurrent models for short-horizon prediction on noisy, non-stationary market data.</li>
+              </ul>
             </div>
           </div>
           <div class="timeline__item">
             <div class="timeline__date">2022</div>
             <div class="timeline__content">
               <h3>Quantitative Research Intern</h3>
-              <p class="timeline__org">Citadel Securities</p>
+              <p class="timeline__org">Citadel Securities · Singapore</p>
               <p>Alpha research in digital assets.</p>
             </div>
           </div>
@@ -160,24 +166,34 @@
 
     <!-- ===== Research interests ===== -->
     <section id="research" class="section">
-      <div class="section__inner" data-reveal>
-        <h2 class="section__title">Current Research Interests</h2>
+      <div class="section__inner">
+        <h2 class="section__title">Research Interests</h2>
 
         <div class="interests">
           <div class="interest">
-            <h3 class="subhead">Sequential decision-making</h3>
-            <p class="interest__scope">Reinforcement learning and multi-armed bandits, through both an algorithmic and a theoretical lens.</p>
-            <p class="interest__related">Related work: <a href="https://openreview.net/forum?id=-RwZOVybbj" target="_blank" rel="noopener">Risk-Aware RL (ICLR 2023) ↗</a></p>
+            <h3 class="subhead">Theoretical machine learning</h3>
+            <p class="interest__scope">Learning theory and the mathematical foundations of learning algorithms: error bounds, generalization, and implicit regularization.</p>
+            <p class="interest__related">Related work:
+              <a href="https://openreview.net/forum?id=JJrKbq35l4" target="_blank" rel="noopener">Bayesian Quadrature Error Bounds (TMLR 2023) ↗</a> ·
+              <a href="https://arxiv.org/abs/2402.17595" target="_blank" rel="noopener">Spectral Neural Networks ↗</a></p>
           </div>
           <div class="interest">
-            <h3 class="subhead">Optimization &amp; learning theory</h3>
-            <p class="interest__scope">Implicit regularization: why gradient-based training finds solutions that generalize.</p>
-            <p class="interest__related">Related work: <a href="https://arxiv.org/abs/2402.17595" target="_blank" rel="noopener">Spectral Neural Networks (arXiv 2024) ↗</a></p>
+            <h3 class="subhead">Reinforcement learning &amp; sequential decision-making</h3>
+            <p class="interest__scope">Reinforcement learning and multi-armed bandits, through both an algorithmic and a theoretical lens: risk-sensitive learning and regret guarantees.</p>
+            <p class="interest__related">Related work:
+              <a href="https://openreview.net/forum?id=-RwZOVybbj" target="_blank" rel="noopener">Risk-Aware RL (ICLR 2023) ↗</a></p>
           </div>
           <div class="interest">
-            <h3 class="subhead">Sequence models at scale</h3>
-            <p class="interest__scope">Pre-training recipes for foundation models; autoregressive and recurrent models for time series.</p>
-            <p class="interest__related">Related work: <a href="#experience">neural-network research at Citadel Securities</a></p>
+            <h3 class="subhead">Optimization &amp; learning algorithms</h3>
+            <p class="interest__scope">Optimization dynamics and how training algorithms shape what models learn, connecting optimization and generalization.</p>
+            <p class="interest__related">Related work:
+              <a href="https://arxiv.org/abs/2402.17595" target="_blank" rel="noopener">Spectral Neural Networks ↗</a></p>
+          </div>
+          <div class="interest">
+            <h3 class="subhead">Deep learning &amp; sequence models</h3>
+            <p class="interest__scope">Neural architectures, sequence modelling, and practical training methodology for noisy, non-stationary time series.</p>
+            <p class="interest__related">Related work:
+              <a href="#experience">neural-network research at Citadel Securities</a></p>
           </div>
         </div>
       </div>
@@ -185,18 +201,19 @@
 
     <!-- ===== Publications ===== -->
     <section id="publications" class="section section--tint">
-      <div class="section__inner" data-reveal>
+      <div class="section__inner">
         <h2 class="section__title">Selected Publications</h2>
         <p class="section__lead">
-          <em>*</em> = equal contribution · full list on
+          <strong>Bold</strong> = me · <em>*</em> = equal contribution · full list on
           <a href="https://scholar.google.com/citations?user=EnEvefwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
         </p>
 
+        <h3 class="subhead">Peer-reviewed</h3>
         <ol class="pubs">
           <li class="pub pub--featured">
             <div class="pub__venue"><span class="tag">ICLR 2023</span></div>
             <div class="pub__body">
-              <h3 class="pub__title">Risk-Aware Reinforcement Learning with Coherent Risk Measures and Non-linear Function Approximation</h3>
+              <h3 class="pub__title"><a href="https://openreview.net/forum?id=-RwZOVybbj" target="_blank" rel="noopener">Risk-Aware Reinforcement Learning with Coherent Risk Measures and Non-linear Function Approximation</a></h3>
               <p class="pub__authors"><strong>Thanh Lam</strong>, Arun Verma, Bryan Low, Patrick Jaillet <span class="pub__contrib">First author</span></p>
               <p class="pub__summary">
                 Gives a unified framework for analyzing the regret of risk-aware RL with coherent risk measures
@@ -204,60 +221,58 @@
                 The proposed algorithm, RA-UCB, covers the whole class of coherent risk measures and is validated
                 on synthetic and real-world data.
               </p>
-              <div class="pub__links"><a href="https://openreview.net/forum?id=-RwZOVybbj" target="_blank" rel="noopener">OpenReview ↗</a></div>
+            </div>
+          </li>
+
+          <li class="pub">
+            <div class="pub__venue"><span class="tag">TMLR 2023</span></div>
+            <div class="pub__body">
+              <h3 class="pub__title"><a href="https://openreview.net/forum?id=JJrKbq35l4" target="_blank" rel="noopener">On Average-Case Error Bounds for Kernel-Based Bayesian Quadrature</a></h3>
+              <p class="pub__authors">Xu Cai*, <strong>Thanh Lam*</strong>, Jonathan Scarlett <span class="pub__contrib">Co-first author</span></p>
+              <p class="pub__summary">
+                Relates average-case Bayesian quadrature error to \(L^2\) function-approximation error, recovering
+                near-optimal rates for Matérn kernels under noise and giving new results for squared-exponential
+                kernels and misspecification, plus algorithm-independent lower bounds.
+              </p>
             </div>
           </li>
 
           <li class="pub">
             <div class="pub__venue"><span class="tag">ICML 2021</span></div>
             <div class="pub__body">
-              <h3 class="pub__title">Model Fusion for Personalized Learning</h3>
+              <h3 class="pub__title"><a href="https://proceedings.mlr.press/v139/lam21a.html" target="_blank" rel="noopener">Model Fusion for Personalized Learning</a></h3>
               <p class="pub__authors"><strong>Thanh Lam*</strong>, Trong Nghia Hoang*, Bryan K. H. Low, Patrick Jaillet <span class="pub__contrib">Co-first author</span></p>
               <p class="pub__summary">
                 Builds models for new, data-scarce tasks by fusing independently pre-trained models of related tasks,
                 removing the synchronized training that meta-learning requires. Comes with a performance guarantee.
               </p>
-              <div class="pub__links"><a href="https://proceedings.mlr.press/v139/lam21a.html" target="_blank" rel="noopener">PMLR ↗</a></div>
             </div>
           </li>
 
           <li class="pub">
             <div class="pub__venue"><span class="tag">ICML 2020</span></div>
             <div class="pub__body">
-              <h3 class="pub__title">Learning Task-Agnostic Embedding of Multiple Black-Box Experts for Multi-Task Model Fusion</h3>
+              <h3 class="pub__title"><a href="https://proceedings.mlr.press/v119/hoang20b.html" target="_blank" rel="noopener">Learning Task-Agnostic Embedding of Multiple Black-Box Experts for Multi-Task Model Fusion</a></h3>
               <p class="pub__authors">Trong Nghia Hoang*, <strong>Thanh Lam*</strong>, Bryan K. H. Low, Patrick Jaillet <span class="pub__contrib">Co-first author</span></p>
               <p class="pub__summary">
                 Represents black-box experts with different architectures and private data as distributions over
                 task-agnostic predictive prototypes, which can be recombined into a model for a new task.
               </p>
-              <div class="pub__links"><a href="https://proceedings.mlr.press/v119/hoang20b.html" target="_blank" rel="noopener">PMLR ↗</a></div>
             </div>
           </li>
+        </ol>
 
+        <h3 class="subhead subhead--mt">Preprints &amp; working papers</h3>
+        <ol class="pubs">
           <li class="pub">
-            <div class="pub__venue"><span class="tag">arXiv</span></div>
+            <div class="pub__venue"><span class="tag">arXiv 2024</span></div>
             <div class="pub__body">
-              <h3 class="pub__title">On Average-Case Error Bounds for Kernel-Based Bayesian Quadrature</h3>
-              <p class="pub__authors">Xu Cai*, <strong>Thanh Lam*</strong>, Jonathan Scarlett <span class="pub__contrib">Co-first author</span></p>
-              <p class="pub__summary">
-                Relates average-case Bayesian quadrature error to L² function-approximation error, recovering
-                near-optimal rates for Matérn kernels under noise and giving new results for squared-exponential
-                kernels and misspecification, plus algorithm-independent lower bounds.
-              </p>
-              <div class="pub__links"><a href="https://arxiv.org/abs/2202.10615" target="_blank" rel="noopener">arXiv:2202.10615 ↗</a></div>
-            </div>
-          </li>
-
-          <li class="pub">
-            <div class="pub__venue"><span class="tag">arXiv</span></div>
-            <div class="pub__body">
-              <h3 class="pub__title">Implicit Regularization via Spectral Neural Networks and Non-linear Matrix Sensing</h3>
-              <p class="pub__authors">Hong T. M. Chu, Subhro Ghosh, <strong>Thanh Lam*</strong>, Soumendu Sundar Mukherjee <span class="pub__contrib">Co-first author</span></p>
+              <h3 class="pub__title"><a href="https://arxiv.org/abs/2402.17595" target="_blank" rel="noopener">Implicit Bias via Spectral Neural Networks and Non-linear Matrix Sensing</a></h3>
+              <p class="pub__authors">Hong T. M. Chu, Xiaoyu Dong, Subhro Ghosh, <strong>Thanh Lam*</strong>, Soumendu Sundar Mukherjee <span class="pub__contrib">Co-first author</span></p>
               <p class="pub__summary">
                 Shows that gradient flow on spectral neural networks for matrix sensing drives the loss down
                 exponentially fast and is implicitly biased toward minimum nuclear-norm solutions.
               </p>
-              <div class="pub__links"><a href="https://arxiv.org/abs/2402.17595" target="_blank" rel="noopener">arXiv:2402.17595 ↗</a></div>
             </div>
           </li>
 
@@ -272,43 +287,45 @@
       </div>
     </section>
 
-    <!-- ===== Education + Honors + Service ===== -->
-    <section id="cv" class="section">
-      <div class="section__inner" data-reveal>
-        <h2 class="section__title">Education &amp; Honors</h2>
-
-        <div class="grid2">
-          <div>
-            <h3 class="subhead">Education</h3>
-            <div class="timeline timeline--compact">
-              <div class="timeline__item">
-                <div class="timeline__date">2019 — 2023</div>
-                <div class="timeline__content">
-                  <h3>Ph.D., Computer Science</h3>
-                  <p class="timeline__org">National University of Singapore · GPA 4.6/5</p>
-                  <p>Advised by Prof. Bryan Low (NUS) and Prof. Patrick Jaillet (MIT).</p>
-                </div>
-              </div>
-              <div class="timeline__item">
-                <div class="timeline__date">2022</div>
-                <div class="timeline__content">
-                  <h3>Visiting Graduate Student</h3>
-                  <p class="timeline__org">MIT · LIDS</p>
-                  <p>Hosted by Prof. Patrick Jaillet.</p>
-                </div>
-              </div>
-              <div class="timeline__item">
-                <div class="timeline__date">2015 — 2019</div>
-                <div class="timeline__content">
-                  <h3>B.Comp., CS (First Class Honours)</h3>
-                  <p class="timeline__org">National University of Singapore · GPA 4.6/5</p>
-                </div>
-              </div>
+    <!-- ===== Education ===== -->
+    <section id="education" class="section">
+      <div class="section__inner">
+        <h2 class="section__title">Education</h2>
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__date">2019 — 2023</div>
+            <div class="timeline__content">
+              <h3>Ph.D., Computer Science</h3>
+              <p class="timeline__org">National University of Singapore · GPA 4.6/5</p>
+              <p>Advised by Prof. Bryan Low (NUS) and Prof. Patrick Jaillet (MIT). SMART Graduate Fellowship.</p>
             </div>
           </div>
+          <div class="timeline__item">
+            <div class="timeline__date">Fall 2022</div>
+            <div class="timeline__content">
+              <h3>Visiting Graduate Student</h3>
+              <p class="timeline__org">MIT · Laboratory for Information &amp; Decision Systems (LIDS)</p>
+              <p>Hosted by Prof. Patrick Jaillet.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__date">2015 — 2019</div>
+            <div class="timeline__content">
+              <h3>B.Comp., Computer Science (First Class Honours)</h3>
+              <p class="timeline__org">National University of Singapore · GPA 4.6/5</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===== Awards & service ===== -->
+    <section id="awards" class="section section--tint">
+      <div class="section__inner">
+        <h2 class="section__title">Awards &amp; Service</h2>
+        <div class="grid2">
           <div>
-            <h3 class="subhead">Honors</h3>
+            <h3 class="subhead">Awards</h3>
             <ul class="list">
               <li><span class="list__year">2019</span> SMART Graduate Fellowship (sole recipient across 4 universities)</li>
               <li><span class="list__year">'20–'21</span> Research Achievement Award (×2)</li>
@@ -316,8 +333,9 @@
               <li><span class="list__year">2019</span> Dean's List</li>
               <li><span class="list__year">2015</span> ASEAN Undergraduate Scholarship (1 of 3 nationwide)</li>
             </ul>
-
-            <h3 class="subhead subhead--mt">Service</h3>
+          </div>
+          <div>
+            <h3 class="subhead">Service</h3>
             <ul class="list">
               <li>Reviewer for ICML, NeurIPS, ICLR, AISTATS, Neural Networks, and IEEE RA-L (2021–2023).</li>
             </ul>
